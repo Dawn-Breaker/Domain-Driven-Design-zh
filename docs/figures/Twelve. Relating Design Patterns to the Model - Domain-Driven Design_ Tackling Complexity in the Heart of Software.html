@@ -1,0 +1,625 @@
+<!--[if IE]><![endif]--><!DOCTYPE html><!--[if IE 8]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/domain-driven-design-tackling/0321125215/ch12.html"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="6212587"
+  data-user-uuid="7a9881eb-86a3-4c71-b7c7-ff99f82bd372"
+  data-username="gdutyy"
+  data-account-type="Trial"
+  
+  data-activated-trial-date="12/26/2019"
+
+
+  data-archive="0321125215"
+  data-publishers="Addison-Wesley Professional"
+
+
+
+  data-htmlfile-name="ch12.html"
+  data-epub-title="Domain-Driven Design: Tackling Complexity in the Heart of Software" data-debug=0 data-testing=0><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/domain-driven-design-tackling/0321125215/ch12.html"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="6212587"
+  data-user-uuid="7a9881eb-86a3-4c71-b7c7-ff99f82bd372"
+  data-username="gdutyy"
+  data-account-type="Trial"
+  
+  data-activated-trial-date="12/26/2019"
+
+
+  data-archive="0321125215"
+  data-publishers="Addison-Wesley Professional"
+
+
+
+  data-htmlfile-name="ch12.html"
+  data-epub-title="Domain-Driven Design: Tackling Complexity in the Heart of Software" data-debug=0 data-testing=0><!--<![endif]--><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="author" content="Safari Books Online" /><meta name="format-detection" content="telephone=no"><meta http-equiv="cleartype" content="on"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="apple-itunes-app" content="app-id=881697395, app-argument=safaridetail://0321125215"/><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0"/><meta property="twitter:account_id" content="4503599627559754" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"510f1a6865",applicationID:"172641827"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><link rel="apple-touch-icon" href="/static/images/apple-touch-icon.0c29511d2d72.png"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'><title>Twelve. Relating Design Patterns to the Model - Domain-Driven Design: Tackling Complexity in the Heart of Software</title><link rel="stylesheet" href="/static/CACHE/css/output.8054605313ed.css" type="text/css" /><link rel="stylesheet" type="text/css" href="/static/css/annotator.e3b0c44298fc.css"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><style type="text/css" title="ibis-book">
+    #sbo-rt-content div{margin-top:4pt;margin-bottom:4pt;margin-right:15pt}#sbo-rt-content .cover{margin-top:2pt;margin-bottom:2pt;text-align:center}#sbo-rt-content h1{margin-top:10pt;text-align:center;margin-bottom:12pt;font-weight:bold}#sbo-rt-content h2{margin-top:7pt;margin-bottom:25pt;font-weight:bold}#sbo-rt-content h3{margin-top:9pt;margin-bottom:8pt;font-weight:bold}#sbo-rt-content h4{margin-top:9pt;margin-bottom:6pt;font-weight:bold}#sbo-rt-content h5{margin-top:9pt;margin-bottom:6pt;font-weight:bold}#sbo-rt-content h6{margin-top:9pt;margin-bottom:6pt;font-weight:bold;font-style:italic}#sbo-rt-content .copy{margin-top:8pt;margin-bottom:8pt;text-indent:.024pt}#sbo-rt-content p{margin-top:5pt;margin-bottom:4pt;text-indent:.002pt}#sbo-rt-content div.image,#sbo-rt-content img{margin:0 auto;padding:0;text-align:center;max-width:99%;max-height:99%;clear:both}#sbo-rt-content .fig-caption{font-weight:bold;page-break-before:avoid;page-break-inside:avoid;margin-top:8pt;margin-bottom:15pt;text-align:center}#sbo-rt-content .caption{font-weight:bold;margin-top:2pt;margin-bottom:8pt;text-align:center;page-break-after:avoid;page-break-inside:avoid}#sbo-rt-content .indenthangingB{margin-top:4pt;margin-bottom:4pt;margin-left:33pt;text-indent:-8pt}#sbo-rt-content .indent{margin-top:4pt;margin-bottom:4pt;margin-left:20pt;text-indent:-2pt}#sbo-rt-content .address{text-align:center}#sbo-rt-content .author{font-size:120%;text-align:center;font-weight:bold;margin-top:80pt;margin-bottom:80pt}#sbo-rt-content .h3{margin-top:9pt;margin-bottom:8pt;font-weight:bold}#sbo-rt-content .toc-chapter{margin-top:12pt;margin-bottom:6pt;margin-left:18pt}#sbo-rt-content .toc-chapter1{margin-top:5pt;margin-bottom:6pt;margin-left:18pt}#sbo-rt-content .toc-preface{margin-top:5pt;margin-bottom:5pt}#sbo-rt-content .toc-part{margin-top:14pt;margin-bottom:8pt;font-weight:bold}#sbo-rt-content .indenthangingN{margin-top:4pt;margin-bottom:4pt;margin-left:58pt;text-indent:-13pt}#sbo-rt-content .indenthangingN1{margin-top:4pt;margin-bottom:4pt;margin-left:57pt}#sbo-rt-content .indenthangingNP{margin-top:4pt;margin-bottom:4pt;margin-left:33pt}#sbo-rt-content .title{font-size:medium;margin-top:9pt;page-break-inside:avoid;page-break-after:avoid;margin-bottom:8pt;margin-left:18pt;font-weight:bold}#sbo-rt-content .subtitle{text-align:center;font-size:large;margin-top:3pt;margin-bottom:8pt;font-weight:bold}#sbo-rt-content .indexmain{margin-top:4pt;margin-bottom:4pt;margin-left:5pt}#sbo-rt-content .indexsub{margin-top:4pt;margin-bottom:4pt;margin-left:20pt}#sbo-rt-content .indexsubsub{margin-top:4pt;margin-bottom:4pt;margin-left:35pt}#sbo-rt-content .toc-section{margin-top:5pt;margin-bottom:5pt;margin-left:38pt}#sbo-rt-content .toc-section1{margin-top:5pt;margin-bottom:5pt;margin-left:55pt}#sbo-rt-content .indenthangingBP{margin-top:4pt;margin-bottom:4pt;margin-left:33pt}#sbo-rt-content .indent1{margin-top:4pt;margin-bottom:4pt;margin-left:20pt}#sbo-rt-content .indent2{margin-top:4pt;margin-bottom:4pt;text-align:right;margin-right:20pt}#sbo-rt-content code{font-size:small}#sbo-rt-content .programlisting{font-family:"Courier New";font-size:small;margin-top:10pt;margin-bottom:10pt}#sbo-rt-content .attribution{margin-top:4pt;margin-bottom:8pt;margin-left:41pt;text-indent:-14pt}#sbo-rt-content .attribution1{margin-top:4pt;margin-bottom:8pt;margin-right:41pt;text-indent:-14pt}#sbo-rt-content .sidebar{font-size:medium;margin-top:5pt;margin-bottom:12pt;margin-left:15pt}#sbo-rt-content .sidebarpara{margin-top:4pt;margin-bottom:5pt;margin-left:24pt;margin-right:24pt}#sbo-rt-content .note{margin-top:6pt;margin-bottom:12pt;margin-left:24pt;margin-right:24pt;page-break-inside:avoid}#sbo-rt-content .notepara{margin-top:2pt;margin-bottom:2pt;margin-left:18pt;margin-right:12pt}#sbo-rt-content .question{margin-top:4pt;margin-bottom:4pt;margin-left:33pt;text-indent:-16pt}#sbo-rt-content .answer{margin-top:4pt;margin-bottom:4pt;margin-left:33pt;text-indent:-16pt}#sbo-rt-content .blockquote{margin-top:4pt;margin-bottom:4pt;margin-left:20pt}#sbo-rt-content .center{margin-top:2pt;margin-bottom:2pt;text-align:center}#sbo-rt-content .roman{font-style:normal;font-weight:normal}#sbo-rt-content .roman1{font-style:italic;font-weight:normal;font-family:"Arial"}#sbo-rt-content .footnote{font-size:small;margin-top:4pt;margin-bottom:4pt;margin-left:30pt;text-indent:-9pt}#sbo-rt-content .bib{margin-top:4pt;margin-bottom:4pt;margin-left:20pt}#sbo-rt-content .credit{margin-top:8pt;margin-bottom:8pt;margin-left:20pt}#sbo-rt-content .gloss{margin-top:4pt;margin-bottom:4pt;margin-left:30pt;text-indent:-22pt}#sbo-rt-content .example{margin-top:6pt;margin-bottom:12pt;margin-left:24pt;margin-right:24pt}#sbo-rt-content .programlisting1{font-family:"Courier New";font-size:small;margin-top:10pt;margin-bottom:10pt;margin-left:24pt}#sbo-rt-content .EmpStrong{font-family:"Courier New Bold";font-weight:bold}#sbo-rt-content .attribution1{margin-top:2pt;margin-bottom:10pt;margin-right:30pt;text-align:right}#sbo-rt-content .ded{margin-top:32pt;margin-bottom:4pt;text-align:center}
+    </style><script> // <![CDATA[
+    var g = {
+      position_cache: {
+        
+          "chapter": "/api/v1/book/0321125215/chapter/ch12.html",
+          "book_id": "0321125215",
+          "chapter_uri": "ch12.html",
+          "position": 69.2094072724,
+          "user_uuid": "7a9881eb-86a3-4c71-b7c7-ff99f82bd372",
+          "next_chapter_uri": "/library/view/domain-driven-design-tackling/0321125215/ch13.html"
+        
+      },
+      title: "Domain\u002DDriven Design: Tackling Complexity in the Heart of Software",
+      author_list: "Eric Evans",
+      format: "book",
+      source: "application/epub+zip",
+      is_system_book: true,
+      is_public: false,
+      loaded_from_server: true,
+      allow_scripts: false,
+      has_mathml: false
+    };
+    // ]]></script><script src="/static/js/src/modernizr.8e35451ddb64.js"></script><script>
+    
+      
+
+      
+        
+          window.PUBLIC_ANNOTATIONS = true;
+        
+      
+
+      window.MOBILE_PUBLIC_ANNOTATIONS = false;
+
+    
+
+    
+      window.PRIVACY_CONTROL_OVERRIDE = false;
+    
+
+      window.PRIVACY_CONTROL_SWITCH = true;
+
+      window.PUBLISHER_PAGES = true;
+
+      window.SBO = {
+        "constants": {
+          "SITB_ENDPOINT": "/api/v2/sitb/",
+          "SEARCH_SELECT_ENDPOINT": "https://learning.oreilly.com/api/v2/search/select/",
+          "ENABLE_ONLINE_TRAINING": true
+        }
+      };
+  </script><link rel="canonical" href="https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html"/><meta name="description" content="Twelve. Relating Design Patterns to the Model The patterns explored in this book so far are intended specifically for solving problems in a domain model in the context of a ... "><meta property="og:title" content="Twelve. Relating Design Patterns to the Model" /><meta itemprop="isPartOf" content="/library/view/domain-driven-design-tackling/0321125215/" /><meta itemprop="name" content="Twelve. Relating Design Patterns to the Model" /><meta property="og:url" itemprop="url" content="https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html" /><meta property="og:site_name" content="Safari" /><meta property="og:image" itemprop="thumbnailUrl" content="https://learning.oreilly.com/library/cover/0321125215/" /><meta property="og:description" itemprop="description" content="Twelve. Relating Design Patterns to the Model The patterns explored in this book so far are intended specifically for solving problems in a domain model in the context of a ... "><meta itemprop="inLanguage" content="en" /><meta itemprop="publisher" content="Addison-Wesley Professional" /><meta property="og:type" content="book" /><meta property="og:book:isbn" itemprop="isbn" content="0321125215" /><meta property="og:book:author" itemprop="author" content="Eric Evans" /><meta property="og:book:tag" itemprop="about" content="Agile" /><meta property="og:book:tag" itemprop="about" content="Business Communication" /><meta property="og:book:tag" itemprop="about" content="Core Programming" /><meta property="og:book:tag" itemprop="about" content="Project Management" /><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@safari"><style type="text/css" id="font-styles" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: <%= font_size %> !important; }"></style><style type="text/css" id="font-family" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: <%= font_family %> !important; }"></style><style type="text/css" id="column-width" data-template="#sbo-rt-content { max-width: <%= column_width %>% !important; margin: 0 auto !important; }"></style><noscript><meta http-equiv="refresh" content="0; url=/library/no-js/" /></noscript><script>
+    var dataLayer = window.dataLayer || [];
+
+    
+      window.medalliaVsgUserIdentifier = '7a9881eb-86a3-4c71-b7c7-ff99f82bd372';
+      dataLayer.push({userIdentifier: '7a9881eb-86a3-4c71-b7c7-ff99f82bd372'});
+      dataLayer.push({loggedIn: 'yes'});
+
+      
+        window.medalliaVsgAccountIdentifier = '6d8bab9c-a218-4578-a464-cf93f801903a';
+        
+
+        window.medalliaVsgIsIndividual = true;
+        
+          
+          dataLayer.push({learningAccountType: 'free trial'});
+          
+        
+
+        
+      
+    
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P4V6Z');
+    (function () {
+      var VERSION = 'V1.1';
+      var AUTHOR = 'Awwad';
+      if (!window.GtmHelper)
+        window.GtmHelper = function () {
+          var instance = this;
+          var loc = document.location;
+          this.version = VERSION;
+          this.author = AUTHOR;
+          this.readCookie = function (name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+          };
+          this.createCookie = function (name, value, days, cookieDomain) {
+            var domain = "";
+            var expires = "";
+
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + Math.ceil(days * 24 * 60 * 60 * 1000));
+              var expires = " expires=" + date.toGMTString() + ";";
+            }
+
+            if (typeof (cookieDomain) != 'undefined')
+              domain = " domain=" + cookieDomain + "; ";
+
+            document.cookie = name + "=" + value + ";" + expires + domain + "path=/";
+          };
+
+          this.isDuplicated = function (currentTransactionId) {
+            // the previous transaction id:
+            var previousTransIdValue = this.readCookie("previousTransId");
+
+            if (currentTransactionId === previousTransIdValue) {
+              return true; // Duplication
+            } else {
+              return false;
+            }
+          };
+        }
+    })()
+  </script><script defer src="/static/js/build/vendor.b72079115638.js"></script><script defer src="/static/js/build/reader.25f0dd727df4.js"></script></head>
+
+
+<body class="reading sidenav nav-collapsed  scalefonts">
+
+    
+  <noscript> 
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+            height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+
+
+
+    
+      <div class="hide working" role="status">
+        <div class="working-image"></div>
+      </div>
+      <div class="sbo-site-nav">
+        
+
+  
+
+
+<a href="#container" class="skip">Skip to content</a><header class="topbar t-topbar"><nav role="navigation" class="js-site-nav"><ul class="topnav"><li><a href="/home/" class="l0 nav-icn"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.738 14H9.254v-3.676a.617.617 0 0 0-.621-.613H7.39a.617.617 0 0 0-.62.613V14H4.284a.617.617 0 0 1-.622-.613V10.22c0-.327.132-.64.367-.87l3.547-3.493a.627.627 0 0 1 .875 0l3.54 3.499c.234.229.366.54.367.864v3.167a.617.617 0 0 1-.62.613zM7.57 2.181a.625.625 0 0 1 .882 0l5.77 5.692-.93.92-5.28-5.209-5.28 5.208-.932-.919 5.77-5.692z" /></svg><span>Home</span></a></li><li class="search"><a href="#" class="t-search-nav trigger nav-icn l0" data-dropdown-selector=".searchbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>search icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M31.3 0C20.9 0 12.5 8.4 12.5 18.8 12.5 22.5 13.6 25.9 15.4 28.8L1.2 42.9C-0.4 44.5-0.4 47.2 1.2 48.8 2 49.6 3.1 50 4.2 50 5.2 50 6.3 49.6 7.1 48.8L21.2 34.6C24.1 36.5 27.5 37.5 31.3 37.5 41.6 37.5 50 29.1 50 18.8 50 8.4 41.6 0 31.3 0ZM31.3 31.3C24.4 31.3 18.8 25.6 18.8 18.8 18.8 11.9 24.4 6.3 31.3 6.3 38.1 6.3 43.8 11.9 43.8 18.8 43.8 25.6 38.1 31.3 31.3 31.3Z"/></g></svg><span>Search</span></a></li><li class="usermenu dropdown"><a href="#" class="trigger l0 nav-icn nav-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>navigation arrow</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M0.1 12.5L9.7 3.1C9.8 3 9.9 3 10 3 10.1 3 10.2 3 10.3 3.1L19.9 12.5C20 12.5 20 12.6 20 12.8 20 12.9 20 13 19.9 13L17 15.9C16.9 16 16.8 16 16.7 16 16.5 16 16.4 16 16.4 15.9L10 9.7 3.6 15.9C3.6 16 3.5 16 3.3 16 3.2 16 3.1 16 3 15.9L0.1 13C0 12.9 0 12.8 0 12.7 0 12.7 0 12.6 0.1 12.5Z"/></g></svg><span>Expand Nav</span></a><div class="drop-content"><ul><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><?xml version="1.0" encoding="UTF-8"?><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,8 C6.34321755,8 5.00013,6.65691245 5.00013,5.00013 C5.00013,3.34334755 6.34321755,2.00026001 8,2.00026001 C9.65678245,2.00026001 10.99987,3.34334755 10.99987,5.00013 C10.99987,6.65691245 9.65678245,8 8,8 Z M2.33024571,11.3523547 L2.33774538,11.3523547 C3.7622187,9.70968996 5.82947484,8.76608166 8.00374984,8.76608166 C10.1780248,8.76608166 12.245281,9.70968996 13.6697543,11.3523547 C13.8892083,11.6177474 14.0062813,11.9530021 13.99974,12.2973138 L13.99974,13.99974 L2.00026001,13.99974 L2.00026001,12.2973138 C1.99371867,11.9530021 2.11079172,11.6177474 2.33024571,11.3523547 Z" id="path-1"></path></svg><span>Your O&#39;Reilly</span></a><ul class="flyout"><li><a
+                    href="/profile/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Profile</span></a></li><li><a
+                    href="/history/"
+                    class="l2 nav-icn"
+                    
+                  ><span>History</span></a></li><li><a
+                    href="/playlists/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Playlists</span></a></li><li><a
+                    href="/u/7a9881eb-86a3-4c71-b7c7-ff99f82bd372/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Highlights</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Featured</span></a><ul class="flyout"><li><a
+                    href="/resource-centers/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Resource Centers</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=collection&amp;sort=date_added&amp;facet_json=true&amp;page=0&amp;collection_type=expert"
+                    class="l2 nav-icn"
+                    
+                  ><span>Expert Playlists</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.6467109,4.35328907 L14.7964612,7.51003884 C15.0678463,7.78304342 15.0678463,8.22395603 14.7964612,8.49696061 L11.6467109,11.6467109 L10.6597892,10.6597892 L13.3055794,8 L10.6597892,5.34021084 L11.6467109,4.35328907 Z M4.35328907,11.6467109 L1.20353875,8.48996116 C0.932153749,8.21695658 0.932153749,7.77604397 1.20353875,7.50303939 L4.35328907,4.35328907 L5.34021084,5.34021084 L2.69442057,8 L5.34021084,10.6597892 L4.35328907,11.6467109 Z M5.84417089,11.4997226 L8.67194674,4.50027742 L10.1838269,4.50027742 L7.35605105,11.4997226 L5.84417089,11.4997226 Z" id="Mask"></path></svg><span>Practice</span></a><ul class="flyout"><li><a
+                    href="/scenarios/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Katacoda Scenarios</span></a></li><li><a
+                    href="/interactive/#notebooks"
+                    class="l2 nav-icn"
+                    
+                  ><span>Jupyter Notebooks</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><?xml version="1.0" encoding="UTF-8"?><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M10.0440191,12.1582649 C10.177209,12.3351976 10.2476998,12.552011 10.2434767,12.7742985 L10.2434767,13.9482829 L1.96869684,13.9482829 L1.96869684,12.7742985 C1.96418597,12.536863 2.04491894,12.3056731 2.19625329,12.1226596 L2.20142503,12.1226596 C3.18373453,10.9898864 4.60930376,10.339179 6.10867266,10.339179 C7.30793519,10.339179 8.45998426,10.7554703 9.37576632,11.5017585 L14.3434936,11.5017585 L14.3434936,3.65650645 L1.65650645,3.65650645 L1.65650645,11.5017585 L2.06682298,11.5017585 L1.82063306,12.1582649 L1.32825322,12.1582649 C1.14771395,12.1582649 1,12.010551 1,11.8300117 L1,3.32825322 C1,3.14771395 1.14771395,3 1.32825322,3 L14.6717468,3 C14.852286,3 15,3.14771395 15,3.32825322 L15,11.8300117 C15,12.010551 14.852286,12.1582649 14.6717468,12.1582649 L10.0440191,12.1582649 Z M12.5483683,7.16419284 C12.6159362,7.20929881 12.6563112,7.2853432 12.6558247,7.36658194 C12.6553382,7.44782068 12.6140555,7.5233761 12.5459522,7.56766966 L10.4270949,8.91581376 C10.3903366,8.94010203 10.3431312,8.9419685 10.3045699,8.9206583 C10.2660086,8.89934811 10.2424712,8.85838696 10.2434767,8.81434055 L10.2434767,5.91510593 C10.2420711,5.86982855 10.2666257,5.82771857 10.3067229,5.80664182 C10.3468202,5.78556507 10.3954292,5.7892172 10.431927,5.81604875 L12.5483683,7.16419284 Z M6.10608679,9.81089299 C4.9635781,9.81089299 4.03739181,8.8847067 4.03739181,7.74219802 C4.03739181,6.59968933 4.9635781,5.67350304 6.10608679,5.67350304 C7.24859547,5.67350304 8.17478176,6.59968933 8.17478176,7.74219802 C8.17478176,8.8847067 7.24859547,9.81089299 6.10608679,9.81089299 Z"></path></svg><span>Sandboxes</span></a><ul class="flyout"><li><a
+                    href="/scenarios/kubernetes-sandbox/9781492062820/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Kubernetes</span></a></li><li><a
+                    href="/scenarios/python-sandbox/9781492062844/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Python</span></a></li><li><a
+                    href="/scenarios/tensorflow-sandbox/9781492062851/"
+                    class="l2 nav-icn"
+                    
+                  ><span>TensorFlow</span></a></li><li><a
+                    href="/scenarios/ubuntu-sandbox/9781492062837/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Ubuntu</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>queue icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 29.2C25.4 29.2 25.8 29.1 26.1 28.9L48.7 16.8C49.5 16.4 50 15.5 50 14.6 50 13.7 49.5 12.8 48.7 12.4L26.1 0.3C25.4-0.1 24.6-0.1 23.9 0.3L1.3 12.4C0.5 12.8 0 13.7 0 14.6 0 15.5 0.5 16.4 1.3 16.8L23.9 28.9C24.2 29.1 24.6 29.2 25 29.2ZM7.3 14.6L25 5.2 42.7 14.6 25 24 7.3 14.6ZM48.7 22.4L47.7 21.9 25 34.2 2.3 21.9 1.3 22.4C0.5 22.9 0 23.7 0 24.7 0 25.6 0.5 26.5 1.3 26.9L23.9 39.3C24.2 39.5 24.6 39.6 25 39.6 25.4 39.6 25.8 39.5 26.1 39.3L48.7 26.9C49.5 26.5 50 25.6 50 24.7 50 23.7 49.5 22.9 48.7 22.4ZM48.7 32.8L47.7 32.3 25 44.6 2.3 32.3 1.3 32.8C0.5 33.3 0 34.1 0 35.1 0 36 0.5 36.9 1.3 37.3L23.9 49.7C24.2 49.9 24.6 50 25 50 25.4 50 25.8 49.9 26.1 49.7L48.7 37.3C49.5 36.9 50 36 50 35.1 50 34.1 49.5 33.3 48.7 32.8Z"/></g></svg><span>Explore</span></a><ul class="flyout"><li><a
+                    href="/topics/"
+                    class="l2 nav-icn"
+                    
+                  ><span>All Topics</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;formats=case%20study&amp;formats=learning%20path&amp;formats=live%20online%20training&amp;formats=notebook&amp;formats=oriole&amp;formats=video&amp;sort=popularity&amp;facet_json=true&amp;page=0&amp;collection_type=expert"
+                    class="l2 nav-icn"
+                    
+                  ><span>Most Popular Titles</span></a></li><li><a
+                    href="/r/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Recommendations</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;sort=publication_date&amp;facet_json=true&amp;page=0"
+                    class="l2 nav-icn"
+                    
+                  ><span>Early Release</span></a></li><li><a
+                    href="/playlists/discover/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Playlists</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M13.4 9.8a.6.6 0 0 1 .6.6v1.2h-1.2l-.6 2.4H3.8l-.6-2.4H2v-1.2a.6.6 0 0 1 .6-.6h10.8zM8 5.6a1.8 1.8 0 1 1-.001-3.599A1.8 1.8 0 0 1 8 5.6zm3.6 2.35v.95H4.4v-.95c0-.167.066-.33.19-.443A5.08 5.08 0 0 1 8 6.2a5.08 5.08 0 0 1 3.41 1.307c.124.113.19.276.19.444z" /></svg><span>Attend</span></a><ul class="flyout"><li><a
+                    href="/live-training/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Live Training</span></a></li><li><a
+                    href="https://www.oreilly.com/conferences/?discount=learn"
+                    class="l2 nav-icn"
+                    target=&quot;_blank&quot;
+                  ><span>Conferences</span></a></li></ul></li><li ><a
+                href="https://get.oreilly.com/email-signup.html"
+                class="l1 nav-icn "
+                target=&quot;_blank&quot;
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Newsletters</span></a></li><li ><a
+                href="/u/preferences/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"/></g></svg><span>Settings</span></a></li><li ><a
+                href="/public/support/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.363 6.656a2.692 2.692 0 0 1-2.681-2.703c0-1.493 1.2-2.703 2.681-2.703a2.692 2.692 0 0 1 2.682 2.703c0 1.493-1.2 2.703-2.682 2.703zm4.023 2.027c-1.852 0-3.352 1.513-3.352 3.379H2v-1.534c-.006-.31.099-.612.295-.852a6.666 6.666 0 0 1 9.09-.993zm-.543.676h1.12v.304c.003.284.16.543.408.676a.766.766 0 0 0 .77 0l.303-.176.556.966-.302.176a.772.772 0 0 0-.362.676v.08a.772.772 0 0 0 .362.677l.302.21-.556.965-.302-.175a.766.766 0 0 0-.771 0 .778.778 0 0 0-.409.675v.352h-1.106v-.372a.778.778 0 0 0-.409-.676.766.766 0 0 0-.77 0l-.303.176-.556-.912.302-.176a.772.772 0 0 0 .362-.676v-.04-.04a.772.772 0 0 0-.362-.676l-.302-.176.556-.966.289.155a.766.766 0 0 0 .77 0 .778.778 0 0 0 .41-.676V9.36zm1.562 2.703c0-.271-.108-.531-.3-.722a1.001 1.001 0 0 0-.72-.292 1.01 1.01 0 0 0-.992 1.023 1.01 1.01 0 0 0 1.01 1.004 1.01 1.01 0 0 0 1.002-1.013z" /></svg><span>Support</span></a></li><li ><a
+                href="/accounts/logout/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.613 12.63A.607.607 0 0 1 2 12.03V3.602C2 3.269 2.274 3 2.613 3h5.515v1.204H3.226v7.223h4.902v1.203H2.613zM5.677 9.02V6.611h4.903V4.926a.301.301 0 0 1 .19-.274.31.31 0 0 1 .33.063l2.722 2.673a.594.594 0 0 1 0 .849L11.1 10.909a.31.31 0 0 1-.331.063.301.301 0 0 1-.19-.274V9.02H5.677z" /></svg><span>Sign Out</span></a></li></ul></div></li></ul></nav></header>
+
+
+
+      </div>
+      <div id="container" class="application">
+        
+          <div class="nav-container clearfix">
+            
+
+
+            
+            
+          </div>
+
+          
+
+  <div class="js-toc">
+    
+      <div class="sbo-reading-menu sbo-menu-top"><section class="sbo-toc-container toc-menu"><a href="#" class="sbo-toc-thumb"><span class="sbo-title ss-list"><h1><div class="visuallyhidden">Table of Contents for </div>
+      
+      Domain-Driven Design: Tackling Complexity in the Heart of Software
+      
+    </h1></span></a><div class="toc-contents"></div></section></div>
+
+    
+
+    <div class="interface-controls interface-controls-top">
+      <ul class="interface-control-btns js-bitlist js-reader">
+        <li class="js-search-in-archive search-in-archive t-search-in-archive"><a href="#" title="Search in archive" class="js-search-controls search-controls"><span class="icon">Search in book...</span></a><form class="search-archive-bar js-search-form"><input type="search" name="query" placeholder="Search inside this book..." autocomplete="off"></form><div class="search-archive-results"><div class="js-sitb-results-region"></div></div></li><li class="queue-control"><div class="js-content-uri" data-content-uri="/api/v1/book/0321125215/chapter/ch12.html"><div class="js-collections-dropdown collections-dropdown menu-bit-cards"></div></div></li><li class="js-font-control-panel font-control-activator"><a href="#" data-push-state="false" id="font-controls" title="Change font size" aria-label="Change font size"><span class="icon">Toggle Font Controls</span></a></li><li class="dropdown sharing-controls"><a href="#" class="trigger" data-push-state="false" title="Share" aria-label="Share"><i class="fa fa-share"></i></a><ul class="social-sharing dropdown-menu"><li><a
+        class="twitter share-button t-twitter"
+        target="_blank"
+        aria-label="Share this section on Twitter"
+        title="Share this section on Twitter"
+      
+        href="https://twitter.com/share?url=https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html&text=Domain-Driven%20Design%3A%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software&via=safari"
+      ><span>Twitter</span></a></li><li><a
+        class="facebook share-button t-facebook"
+        target="_blank"
+        aria-label="Share this section on Facebook"
+        title="Share this section on Facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html"
+      ><span>Facebook</span></a></li><li><a
+        class="googleplus share-button t-googleplus"
+        target="_blank"
+        aria-label="Share this secton on Google Plus"
+        title="Share this secton on Google Plus"
+        href="https://plus.google.com/share?url=https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html"
+      ><span>Google Plus</span></a></li><li><a
+        class="email share-button t-email"
+        aria-label="Share this section via email"
+        title="Share this section via email"
+      
+        href="mailto:?subject=Safari: Twelve.%20Relating%20Design%20Patterns%20to%20the%20Model&body=https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/ch12.html%0D%0Afrom Domain-Driven%20Design%3A%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%0D%0A"
+      ><span>Email</span></a></li></ul></li>
+      </ul>
+    </div>
+
+    
+    <section role="document">
+        
+        
+
+
+
+
+  <script defer src="/static/js/build/djangoMessagesPage.9f800358b9d4.js"></script>
+
+
+        
+	  <div class="t-sbo-prev sbo-prev sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/domain-driven-design-tackling/0321125215/ch11.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Eleven. Applying Analysis Patterns</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/domain-driven-design-tackling/0321125215/ch13.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Thirteen. Refactoring Toward Deeper Insight</div>
+        </a>
+    
+  
+  </div>
+
+
+
+<div id="sbo-rt-content"><h2 id="ch12"><a id="page_309"></a>Twelve. Relating Design Patterns to the Model</h2>
+<p>The patterns explored in this book so far are intended specifically for solving problems in a domain model in the context of a <small>MODEL-DRIVEN DESIGN</small>. Actually, though, most of the patterns published to date are more technical in focus. What is the difference between a design pattern and a domain pattern? For starters, the authors of the seminal book, <em>Design Patterns</em>, had this to say:</p>
+<p class="blockquote">Point of view affects one’s interpretation of what is and isn’t a pattern. One person’s pattern can be another person’s primitive building block. For this book we have concentrated on patterns at a certain level of abstraction. Design patterns are not about designs such as linked lists and hash tables that can be encoded in classes and reused as is. Nor are they complex, domain-specific designs for an entire application or subsystem. The design patterns in this book are descriptions of communicating objects and classes that are customized to solve a general design problem in a particular context. [<a href="bib01.html#biblio01entry14">Gamma et al. 1995</a>, p. 3]</p>
+<p>Some, not all, of the patterns in <em>Design Patterns</em> can be used as domain patterns. Doing so requires a shift in emphasis. <em>Design Patterns</em> presents a catalog of design elements that have solved problems commonly encountered in a variety of contexts. The motivations of these patterns and the patterns themselves are presented in purely technical terms. But a subset of these elements can be applied in the <a id="page_310"></a>broader context of domain modeling and design, because they correspond to general concepts that emerge in many domains.</p>
+<p>In addition to those in <em>Design Patterns,</em> there have been many other technical design patterns presented over the years. Some of them correspond to deep concepts that emerge in domains. It would be nice to draw on this work. To make use of such patterns in domain-driven design, we have to look at the patterns on two levels simultaneously. On one level, they are technical design patterns in the code. On the other level, they are conceptual patterns in the model.</p>
+<p>A sample of specific patterns from <em>Design Patterns</em> will show how a pattern conceived as a design pattern can be applied in the domain model, and it will clarify the distinction between a technical design pattern and a domain pattern. <small>COMPOSITE</small> and <small>STRATEGY</small> demonstrate how some of the classic design patterns can be applied to domain problems by thinking about them in a different way. . . .</p>
+<h3 id="ch12lev1sec1">Strategy (a.k.a. Policy)</h3>
+<div class="image"><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12inf01.jpg" alt="Image" width="700" height="366"></div>
+<p class="blockquote"><a id="page_311"></a>Define a family of algorithms, encapsulate each one, and make them interchangeable. S<small>TRATEGY</small> lets the algorithm vary independently from clients that use it. [<a href="bib01.html#biblio01entry14">Gamma et al. 1995</a>]</p>
+<p><strong>Domain models contain processes that are not technically motivated but actually meaningful in the problem domain. When alternative processes must be provided, the complexity of choosing the appropriate process combines with the complexity of the multiple processes themselves, and things get out of hand.</strong></p>
+<p>When we model processes, we often realize that there is more than one legitimate way of doing them. As we start to describe these options, our definition of the process becomes clumsy and complicated. The actual behavioral alternatives we are choosing between are obscured as they are mixed in with the rest of the behavior.</p>
+<p>We would like to separate this variation from the main concept of the process. Then we would be able to see both the main process and the options more clearly. The <small>STRATEGY</small> pattern, already well established in the software design community, addresses this very issue, though the focus is technical. Here it is being applied as a concept in a model and reflected in the code implementation of that model. There is the same need to decouple the highly variable part of the process from the more stable part.</p>
+<p><a id="page_312"></a>Therefore:</p>
+<p><strong>Factor the varying part of a process into a separate “strategy” object in the model. Factor apart a rule and the behavior it governs. Implement the rule or substitutable process following the <small>STRATEGY</small> design pattern. Multiple versions of the strategy object represent different ways the process can be done.</strong></p>
+<p>Whereas the conventional view of <small>STRATEGY</small> as a design pattern focuses on the ability to substitute different algorithms, its use as a domain pattern focuses on its ability to express a concept, usually a process or a policy rule.</p>
+<h4 id="ch12lev2sec1">Example: Route-Finding Policies</h4>
+<p>A <strong>Route Specification</strong> is being passed to a <strong>Routing Service</strong>, whose job is to construct a detailed <strong>Itinerary</strong> that satisfies the <small>SPECIFICATION</small>. This <small>SERVICE</small> is an optimization engine that can be tuned to find either the fastest route or the cheapest one.</p>
+<div class="image"><a id="ch12fig01"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig01.jpg" alt="Image" width="750" height="294"></div>
+<p class="fig-caption">Figure 12.1. A <small>SERVICE</small> interface with options will need conditional logic.</p>
+<p>This setup looks OK, but a detailed look at the routing code would reveal conditionals in every computation, making the decision between fastest or cheapest appear all over the place. More trouble will come when new criteria are added to make more subtle choices between routes.</p>
+<p>One approach is to separate those tuning parameters into <small>STRATEGIES</small>. Then they can be represented explicitly, passed into the <strong>Routing Service</strong> as a parameter.</p>
+<p><a id="page_313"></a>The <strong>Routing Service</strong> now handles all requests in the same, unconditional way, looking for a sequence of <strong>Legs</strong> with a low magnitude, as computed by the <strong>Leg Magnitude Policy</strong>.</p>
+<p>This design has the advantages that motivate the <small>STRATEGY</small> pattern in <em>Design Patterns</em>. On the level of application versatility and flexibility, the behavior of the <strong>Routing Service</strong> can now be controlled and extended by installing an appropriate <strong>Leg Magnitude Policy</strong>. The <small>STRATEGIES</small> illustrated in <a href="ch12.html#ch12fig02">Figure 12.2</a> (fastest or cheapest) are only the most obvious ones. Combinations that balance speed and cost are likely. There may be other factors altogether, such as a bias toward booking cargo on the company’s own transports rather than subcontracting to carry them on the transports of other shipping companies. These modifications could have been made without resorting to <small>STRATEGIES</small>, but the logic would have wound through the internals of the <strong>Routing Service</strong> and bloated its interface. The decoupling does make it clear and easily testable.</p>
+<div class="image"><a id="ch12fig02"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig02.jpg" alt="Image" width="850" height="494"></div>
+<p class="fig-caption">Figure 12.2. Options determined by choice of <small>STRATEGY (POLICY)</small> passed as argument</p>
+<p>A fundamentally important rule in the domain, the basis of choosing one <strong>Leg</strong> over another when building an <strong>Itinerary</strong>, is now explicit and distinct. It conveys the knowledge that a specific attribute (potentially derived) of an individual leg, boiled down to a single number, is the basis for routing. This makes possible a simple statement in the language of the domain that defines the <strong>Routing Service’s</strong> behavior: The <strong>Routing Service</strong> chooses an <strong>Itinerary</strong> with a minimum <a id="page_314"></a>total magnitude of the <strong>Legs</strong> based on the chosen <small>STRATEGY</small>.</p>
+<p><strong>Note:</strong> This discussion implies that the <strong>Routing Service</strong> is actually evaluating <strong>Legs</strong> as it searches for an <strong>Itinerary</strong>. This approach is conceptually straightforward, and it could make a reasonable prototype implementation, but it is probably unacceptably inefficient. This application will be taken up again in <a href="ch14.html#ch14">Chapter 14</a>, “<a href="ch14.html#ch14">Maintaining Model Integrity</a>,” where the same interface will be used with a completely different implementation of the <strong>Routing Service</strong>.</p>
+<div class="image"><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"> <img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"> <img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"></div>
+<p>When we use the technical design pattern in the domain layer, we have to add an additional motivation, another layer of meaning. When the <small>STRATEGY</small> corresponds to an actual business strategy or policy, the pattern becomes more than just a useful implementation technique (though that too is valuable as far as it goes).</p>
+<p>The <em>consequences</em> of the design pattern fully apply. For example, in <em>Design Patterns</em>, Gamma et al. point out that clients must be aware of different <small>STRATEGIES</small>, which is also a modeling concern. A concern purely of implementation is that <small>STRATEGIES</small> can increase the number of objects in the application. If that is a problem, the overhead can be reduced by implementing <small>STRATEGIES</small> as stateless objects that contexts can share. The extensive discussion of implementation approaches in <em>Design Patterns</em> all applies here. This is because we are still using a <small>STRATEGY</small>. Our motivations are partially different, which will affect some choices, but the experience embedded in the design pattern is at our disposal.</p>
+<h3 id="ch12lev1sec2">Composite</h3>
+<div class="image"><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12inf02.jpg" alt="Image" width="800" height="427"></div>
+<p class="blockquote"><a id="page_315"></a>Compose objects into tree structures to represent part-whole hierarchies. C<small>OMPOSITE</small> lets clients treat individual objects and compositions of objects uniformly. [<a href="bib01.html#biblio01entry14">Gamma et al. 1995</a>]</p>
+<p>We often encounter, while modeling complex domains, an important object that is composed of parts, which are themselves made up of parts, which are made up of parts—occasionally even nesting to arbitrary depth. In some domains, each of these levels is conceptually distinct, but in other cases, there is a sense in which the parts are the same kind of thing as the whole, only smaller.</p>
+<p><strong>When the relatedness of nested containers is not reflected in the model, common behavior has to be duplicated at each level of the hierarchy, and nesting is rigid (for example, containers can’t usually contain other containers at their own level, and the number of levels is fixed). Clients must deal with different levels of the hierarchy through different interfaces, even though there may be no conceptual difference they care about. Recursion through the hierarchy to produce aggregated information is very complicated.</strong></p>
+<p>When applying any design pattern in the domain, the first concern should be whether the pattern idea really is a good fit for the domain concept. It might be convenient to move recursively through some associated objects, but is there a true whole-part hierarchy? Have you found an abstraction under which all the parts truly are the <a id="page_316"></a>same conceptual type? If you have, <small>COMPOSITE</small> will make those aspects of the model clearer, while allowing you to tap into the carefully thought-out design and implementation considerations of the design pattern.</p>
+<p>Therefore:</p>
+<p><strong>Define an abstract type that encompasses all members of the <small>COMPOSITE</small>. Methods that return information are implemented on containers to return aggregated information about their contents. “Leaf” nodes implement those methods based on their own values. Clients deal with the abstract type and have no need to distinguish leaves from containers.</strong></p>
+<p>This is a relatively obvious pattern on the structural level, but designers often do not push themselves to flesh out the operational level of the pattern. The <small>COMPOSITE</small> offers the same behavior at every structural level, and meaningful questions can be asked of small or large parts that transparently reflect their makeup. That rigorous symmetry is the key to the power of the pattern.</p>
+<h4 id="ch12lev2sec2">Example: Shipment Routes Made of Routes</h4>
+<p>A complete cargo shipment route is complicated. First the container must be trucked to a railhead, then carried to a port, then transported on a ship to another port, possibly transferred to other ships, and finally transported by ground on the other end.</p>
+<div class="image"><a id="ch12fig03"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig03.jpg" alt="Image" width="750" height="354"></div>
+<p class="fig-caption">Figure 12.3. A schematic of a “route” made up of “legs”</p>
+<p><a id="page_317"></a>An application development team has created an object model to express these arbitrarily long strings of legs that assemble into a route.</p>
+<div class="image"><a id="ch12fig04"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig04.jpg" alt="Image" width="451" height="452"></div>
+<p class="fig-caption">Figure 12.4. A class diagram of a <span class="roman">Route</span> made up of <span class="roman">Legs</span></p>
+<p>Using this model, the developers are able to create <strong>Route</strong> objects based on booking requests. They are able to process the <strong>Legs</strong> into the operational plan for the step-by-step handling of the cargo. Then they discover something.</p>
+<p>The developers had always thought of a route as an arbitrary, un-differentiated string of legs.</p>
+<div class="image"><a id="ch12fig05"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig05.jpg" alt="Image" width="500" height="22"></div>
+<p class="fig-caption">Figure 12.5. The developers’ conception of a route</p>
+<p>It turns out the domain experts see the route as a sequence of five logical segments.</p>
+<div class="image"><a id="ch12fig06"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig06.jpg" alt="Image" width="650" height="204"></div>
+<p class="fig-caption">Figure 12.6. The business experts’ conception of a route</p>
+<p>Among other things, these subroutes may be planned at different times by different people, so they have to be viewed as distinct. And on closer inspection, the “door legs” are quite different from the <a id="page_318"></a>other legs, involving locally hired trucks or even customer haulage, in contrast to the elaborately scheduled rail and ship transports.</p>
+<p>An object model reflecting all these distinctions starts to get complicated.</p>
+<div class="image"><a id="ch12fig07"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig07.jpg" alt="Image" width="650" height="445"></div>
+<p class="fig-caption">Figure 12.7. The elaborated class diagram of Route</p>
+<p>Structurally the model isn’t so bad, but the uniformity of processing the operational plan is lost, so the code, or even a description of behavior, becomes much more complicated. Other complications begin to surface, too. Any traversal of a route involves multiple collections of different types of objects.</p>
+<p>Enter <small>COMPOSITE</small>. It would be nice, for certain clients, to treat the different levels in this construct uniformly, as routes made up of routes. Conceptually this view is sound. Every level of <strong>Route</strong> is a movement of a container from one point to another, all the way down to an individual leg. (See <a href="ch12.html#ch12fig08">Figure 12.8</a>.)</p>
+<div class="image"><a id="ch12fig08"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig08.jpg" alt="Image" width="750" height="511"></div>
+<p class="fig-caption">Figure 12.8. A class diagram using <small>COMPOSITE</small></p>
+<p>Now, the static class diagram does not tell us as much about how door legs and other segments fit together as the previous one did. But the model is more than a static class diagram. We’ll convey assembly information through other diagrams (see <a href="ch12.html#ch12fig09">Figure 12.9</a>) and through the (now much simpler) code. This model captures the deep relatedness of all these different kinds of “<strong>Route</strong>.” Generating the operational plan is simple again, as are other route-traversing operations.</p>
+<div class="image"><a id="ch12fig09"></a><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/12fig09.jpg" alt="Image" width="750" height="657"></div>
+<p class="fig-caption">Figure 12.9. Instances representing a complete Route</p>
+<p><a id="page_319"></a><a id="page_320"></a>With a route made of other routes, pieced together end to end to get from one place to another, you can have route implementations of varying detail. You can chop off the end of a route and splice on a new ending, you can have arbitrary nesting of detail, and you can exploit all sorts of possibly useful options.</p>
+<p>Of course, we don’t yet need such options. And before we needed those route segments and distinct door legs, we were doing just fine without <small>COMPOSITE</small>. A design pattern should be applied only when it is needed.</p>
+<div class="image"><img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"> <img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"> <img src="/library/view/domain-driven-design-tackling/0321125215/graphics/astric.jpg" alt="Image" width="11" height="11"></div>
+<h3 id="ch12lev1sec3">Why Not F<small>LYWEIGHT?</small></h3>
+<p>Because I referred to the <small>FLYWEIGHT</small> pattern earlier (in <a href="ch05.html#ch05">Chapter 5</a>), you might have assumed that it is an example of a pattern to be applied to domain models. In fact, <small>FLYWEIGHT</small> is a good example of a design pattern that has <em>no correspondence</em> to the domain model.</p>
+<p>When a limited set of <small>VALUE OBJECTS</small> is used many times (as in the example of electrical outlets in a house plan), it may make sense to implement them as <small>FLYWEIGHTS</small>. This is an <em>implementation</em> option available for <small>VALUE OBJECTS</small> and not for <small>ENTITIES</small>. Contrast this with <small>COMPOSITE</small>, in which conceptual objects are composed of other conceptual objects. In that case, the pattern applies to both model and implementation, which is an essential trait of a domain pattern.</p>
+<p>I’m not going to try to compile a list of the design patterns that can be used as domain patterns. Although I can’t think of an example of using an interpreter as a domain pattern, I’m not prepared to say that there is no conception of any domain that would fit. The only requirement is that the pattern should say something about the conceptual domain, not just be a technical solution to a technical problem.</p>
+</div>
+
+
+
+  <div class="t-sbo-prev sbo-prev sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/domain-driven-design-tackling/0321125215/ch11.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Eleven. Applying Analysis Patterns</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/domain-driven-design-tackling/0321125215/ch13.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Thirteen. Refactoring Toward Deeper Insight</div>
+        </a>
+    
+  
+  </div>
+
+
+        
+    </section>
+  </div>
+<section class="sbo-saved-archives"></section>
+
+<script>
+  function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  context = {
+    product: {
+      title: 'Domain-Driven Design: Tackling Complexity in the Heart of Software',
+      type: 'book',
+      identifier: '0321125215',
+      topic: 'Domain-Driven Design'
+    },
+    content: {
+      title: 'Domain-Driven Design: Tackling Complexity in the Heart of Software',
+      formatType: 'book',
+      identifier: '0321125215',
+      author: 'Eric Evans',
+      publisher: decodeHtml('Addison-Wesley Professional'),
+      releaseDate: '2003-08-20',
+      parentTopic: 'none',
+      free: 'no',
+      subdirectory: 'none'
+    }
+  }
+  dataLayer.push(context);
+</script>
+
+
+
+          
+          
+  
+
+
+
+
+    
+    
+      <div id="js-subscribe-nag" class="subscribe-nag clearfix trial-panel t-subscribe-nag">
+        
+        
+          
+          
+            <p class="usage-data">Find answers on the fly, or master something new. Subscribe today. <a href="/subscribe/" class="ga-active-trial-subscribe-nag">See pricing options.</a></p>
+          
+
+          
+        
+        
+
+      </div>
+
+    
+    
+
+
+
+        
+      </div>
+      
+        
+
+
+<footer class="pagefoot t-pagefoot">
+  <a href="#" class="icon-up"><div class="visuallyhidden">Back to top</div></a>
+  <ul class='js-footer-nav'>
+  
+    
+    <li><a href="/u/preferences/">Settings</a></li>
+    
+    <li><a href="/public/support/">Support</a></li>
+    
+    <li><a href="/accounts/logout/">Sign Out</a></li>
+    
+  
+  
+  </ul>
+  <span class="copyright">&#169; 2019 <a href="/" target="_blank">O'Reilly Media, Inc</a>.</span>
+  
+    
+    <a href="https://www.oreilly.com/terms/">Terms of Service</a> 
+     / 
+    
+    <a href="/privacy">Privacy Policy</a> 
+    
+    
+  
+</footer>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"agent":"","applicationTime":388,"transactionName":"YgdaZ0NSW0cEB0RdWltNfkZfUEFdCgofXFBHDVYdR1pQQxZeRl1QQj1aWkU=","errorBeacon":"bam.nr-data.net","applicationID":"172641827,79672898,93931619","queueTime":2,"beacon":"bam.nr-data.net","licenseKey":"510f1a6865"}</script>
+
+      
+    
+    <script src="/jsi18n/web/" charset="utf-8"></script>
+    <script src="/library/jsi18n/appcache/" charset="utf-8"></script>
+  </body>
+</html>
