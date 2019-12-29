@@ -1,4 +1,7 @@
-# Eight. Breakthrough
+# 第 8 章 突破
+
+> Eight. Breakthrough
+
 Image
 The returns from refactoring are not linear. Usually there is a marginal return for a small effort, and the small improvements add up. They fight entropy, and they are the frontline protection against a fossilized legacy. But some of the most important insights come abruptly and send a shock through the project.
 

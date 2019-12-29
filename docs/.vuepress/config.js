@@ -29,23 +29,28 @@ module.exports = {
     sidebar: {
       "/": [
         "",
+        "part1.md",
         "ch1.md",
         "ch2.md",
         "ch3.md",
+        "part2.md",
         "ch4.md",
         "ch5.md",
         "ch6.md",
         "ch7.md",
+        "part3.md",
         "ch8.md",
         "ch9.md",
         "ch10.md",
         "ch11.md",
         "ch12.md",
         "ch13.md",
+        "part4.md",
         "ch14.md",
         "ch15.md",
         "ch16.md",
         "ch17.md",
+        "conclusion.md"
       ]
     }
   }

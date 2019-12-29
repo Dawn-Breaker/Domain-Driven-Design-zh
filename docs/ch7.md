@@ -1,4 +1,7 @@
-# Seven. Using the Language: An Extended Example
+# 第 7 章 使用语言：一个扩展的示例
+
+> Seven. Using the Language: An Extended Example
+
 The preceding three chapters introduced a pattern language for honing the fine detail of a model and maintaining a tight MODEL-DRIVEN DESIGN. In the earlier examples, the patterns were mostly applied one at a time, but on a real project you have to combine them. This chapter presents one elaborate example (still drastically simpler than a real project, of course). The example will step through a succession of model and design refinements as a hypothetical team deals with requirements and implementation issues and develops a MODEL-DRIVEN DESIGN, showing the forces that apply and how the patterns of Part II can resolve them.
 
 INTRODUCING THE CARGO SHIPPING SYSTEM

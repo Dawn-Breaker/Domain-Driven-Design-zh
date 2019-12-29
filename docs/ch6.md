@@ -1,4 +1,7 @@
-# Six. The Life Cycle of a Domain Object
+# 第 6 章 领域对象的生命周期
+
+> Six. The Life Cycle of a Domain Object
+
 Every object has a life cycle. An object is born, it likely goes through various states, and it eventually dies—being either archived or deleted. Of course, many of these are simple, transient objects, created with an easy call to their constructor, used in some computation, and then abandoned to the garbage collector. There is no need to complicate such objects. But other objects have longer lives, not all of which are spent in active memory. They have complex interdependencies with other objects. They go through changes of state to which invariants apply. Managing these objects presents challenges that can easily derail an attempt at MODEL-DRIVEN DESIGN.
 
 Image
