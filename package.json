@@ -1,6 +1,15 @@
 {
+  "name": "domain-driven-design-zh-local",
+  "private": true,
   "scripts": {
+    "dev": "vuepress dev docs --open",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.15",
+    "@vuepress/theme-default": "^2.0.0-rc.49",
+    "sass-embedded": "^1.79.3",
+    "vuepress": "^2.0.0-rc.15"
   }
 }
