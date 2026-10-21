@@ -7,7 +7,7 @@ export default {
   // 网站的标题
   title: "领域驱动设计 中文",
   // 上下文根（本地阅读直接走根路径）
-  base: "/",
+  base: "/doc-ddd/",
   theme: defaultTheme({
     editLink: true,
     editLinkText: "帮助我们改善此页面！",
